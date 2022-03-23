@@ -1,6 +1,4 @@
-﻿using UniRx;
-
-namespace ScoreSystem
+﻿namespace ScoreSystem
 {
     public class ScoreModel
     {
