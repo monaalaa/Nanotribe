@@ -1,4 +1,5 @@
-﻿using Behaviours;
+﻿using System;
+using Behaviours;
 using Managers;
 using UnityEngine;
 
@@ -14,6 +15,10 @@ namespace Collectables
         public void CollectItem()
         {
             EventsManager.UpdateScore?.Invoke(changeScoreBy);
+        }
+        private void OnDestroy()
+        {
+            OnCollision -= CollectItem;
         }
     }
 }

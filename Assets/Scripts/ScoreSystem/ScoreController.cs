@@ -5,7 +5,7 @@ namespace ScoreSystem
 {
     public class ScoreController : MonoBehaviour
     {
-        private ScoreModel Model = new ScoreModel();
+        private readonly ScoreModel _model = new ScoreModel();
         [SerializeField] private ScoreView view;
         private void Awake()
         {
@@ -13,13 +13,13 @@ namespace ScoreSystem
         }
         private void UpdateScore(int newScore)
         {
-            Model.Score += newScore;
-            if (Model.Score < 0)
+            _model.Score += newScore;
+            if (_model.Score < 0)
             {
-                Model.Score = 0;
+                _model.Score = 0;
             }
             
-            view.UpdateScore(Model.Score);
+            view.UpdateScore(_model.Score);
         }
         private void OnDestroy()
         {

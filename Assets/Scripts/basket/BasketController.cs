@@ -33,7 +33,7 @@ namespace basket
                transform.position = new Vector3(xPos, YPos, 0.0f);
            }
        }
-       //Note This function just for testing in editor
+       //Note ExecuteEditor function just for testing in editor
        private void ExecuteEditor()
        {
            if (Input.GetKey(KeyCode.LeftArrow) || Input.GetKey(KeyCode.A))

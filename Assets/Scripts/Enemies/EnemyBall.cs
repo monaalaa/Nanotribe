@@ -15,5 +15,9 @@ namespace Enemies
         {
             EventsManager.UpdateScore?.Invoke(changeScoreBy);
         }
+        private void OnDestroy()
+        {
+            OnCollision -= EffectPlayer;
+        }
     }
 }
