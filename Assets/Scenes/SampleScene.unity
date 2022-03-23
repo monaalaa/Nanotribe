@@ -762,7 +762,7 @@ MonoBehaviour:
   data:
     rightLimit: 9
     leftLimit: -9
-    speed: 10
+    speed: 15
 --- !u!1 &1188150198
 GameObject:
   m_ObjectHideFlags: 0
