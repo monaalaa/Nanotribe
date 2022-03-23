@@ -170,6 +170,7 @@ MonoBehaviour:
     roads:
     - {fileID: 5885696720826282896, guid: a2fdc7c8cd7e46649995e52fba86ee3c, type: 3}
     - {fileID: 8529029517544471730, guid: f81ebf926de9a7a46a4c55be4b33ab80, type: 3}
+    - {fileID: 5885696720826282896, guid: 893be6c87ee51324da0b41a5003d8f0f, type: 3}
 --- !u!1 &286957020
 GameObject:
   m_ObjectHideFlags: 0
