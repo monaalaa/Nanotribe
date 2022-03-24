@@ -1,4 +1,5 @@
-﻿using Commands;
+﻿using System;
+using Commands;
 using UnityEngine;
 namespace basket
 {
@@ -7,6 +8,10 @@ namespace basket
        [SerializeField] private BasketModel data = new BasketModel();
        private const float YPos = 15.0f;
        private MoveCommand _command;
+       private void Start()
+       {
+           _command = new MoveCommand(transform);
+       }
        private void Update()
        {
 #if !UNITY_EDITOR
@@ -50,12 +55,12 @@ namespace basket
        }
        private void MoveToRight()
        {
-           _command = new MoveCommand(transform,data.speed,Vector3.right);
+           _command.UpdateMovementProperties(data.speed,Vector3.right);
            _command.Execute();
        }
        private void MoveToLeft()
        {
-           _command = new MoveCommand(transform,data.speed,Vector3.left);
+           _command.UpdateMovementProperties(data.speed,Vector3.left);
            _command.Execute();
        }
     }

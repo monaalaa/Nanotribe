@@ -5,12 +5,15 @@ namespace Commands
     public class MoveCommand
     {
        private readonly Transform _moved;
-       private readonly float _speed;
-       private readonly Vector3 _direction;
+       private float _speed;
+       private Vector3 _direction;
  
-        public MoveCommand(Transform target, float speed, Vector3 direction)
+        public MoveCommand(Transform target)
         {
             _moved = target;
+        }
+        public void UpdateMovementProperties( float speed, Vector3 direction)
+        {
             _speed = speed;
             _direction = direction;
         }
